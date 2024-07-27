@@ -9,7 +9,7 @@ const Transactions = () => {
 
 
   useEffect(() => {
-    axios.get('http://localhost:5000/transactions')
+    axios.get('https://office-transaction-server.onrender.com/transactions')
       .then(response => {
         setTransactions(response.data);
         setLoading(false);

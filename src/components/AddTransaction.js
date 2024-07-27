@@ -17,7 +17,7 @@ const AddTransaction = () => {
     if (type && amount && description) {
       const newTransaction = { type, amount: parseFloat(amount), description, date: new Date() };
 
-      axios.post('http://localhost:5000/transactions', newTransaction)
+      axios.post('https://office-transaction-server.onrender.com/transactions', newTransaction)
         .then(response => {
           history('/');
         })
